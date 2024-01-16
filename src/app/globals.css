@@ -16,12 +16,27 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes throw-away-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes throw-in-animation {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100;
+  }
+}
+
+.throw-away {
+  animation: throw-away-animation 0.5s ease-out forwards;
 }
