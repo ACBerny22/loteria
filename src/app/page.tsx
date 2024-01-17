@@ -154,7 +154,7 @@ export default function Home() {
             {history.map((item, index) => (
               <div key={index} className="flex-none p-3">
                 <img src={(cards.length > 0 && currentId !== 0) ? item.image : ''} 
-                className={`rounded-2xl transition-all w-72 border fade-in`} />
+                className={`rounded-2xl transition-all w-40 border fade-in`} />
               </div>
             ))}
           </div>
